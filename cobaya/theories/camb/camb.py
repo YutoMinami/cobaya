@@ -586,7 +586,8 @@ class camb(BoltzmannBase):
         elif units_factor != 1:
             cl_camb *= units_factor ** 2
 
-        mapping = {"tt": 0, "ee": 1, "bb": 2, "te": 3, "et": 3}
+        #mapping = {"tt": 0, "ee": 1, "bb": 2, "te": 3, "et": 3}
+        mapping = {"tt": 0, "ee": 1, "bb": 2, "te": 3, "eb": 4}
         cls = {"ell": ls}
         for sp, i in mapping.items():
             cls[sp] = cl_camb[:, i]
